@@ -1,0 +1,354 @@
+@media only screen and (min-width: 1200px) {
+.deskhide {
+  display: none;
+}
+}
+@media only screen and (max-width: 1200px) {
+  .mobhide {
+    display: none;
+  }
+}
+
+.top-img img {
+    margin: 0px auto;
+    display: block;
+    width: 50%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.both-padd {
+    padding:0% 3% 0% 3%;
+}
+.first-row {
+    padding: 1% 0% 1% 0%;
+}
+.second-row .left-input {
+    width: 100%;
+}
+.capital-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.right-side .left-input {
+    float: right;
+}
+.right-side .extra-top-33 {
+    margin-top: 33px;
+}
+.left-input {
+    width: 100%;
+    border: 2px solid #333;
+    height: 45px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    background-color: #fefefe;
+}
+.left-input .only-text {
+    font-size: 20px;
+    padding-left: 10px;
+    color: #000;
+    position: relative;
+    top: 5px;
+}
+.set-width-50 {
+  width: 50%;
+  max-width: 50%;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: #b0b0b0;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #b0b0b0;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  ::placeholder {
+    color: #b0b0b0;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  .label-text {
+      font-size: 20px;
+      margin-right: 110px;
+  }
+  [type="checkbox"] {
+    /* position: absolute; */
+    left: -9999px;
+    height: 16px;
+    width: 16px;
+    margin-left: 20px;
+  }
+  .checkdiv {
+      margin-bottom: 10px;
+      padding-left: 200px;
+  }
+  .organization-text {
+      display: inline-block;
+      /* width: 65%; */
+      width: 70%;
+      font-size: 20px;
+  }
+  .ext-top-12 {
+    margin-top: 12px;
+  }
+  .padd-left-15 {
+      /* padding-left: 215px !important; */
+      padding-left: 150px !important;
+  }
+  .pick-file {
+     /* width: 40%; */
+      float: right;
+      background-color: #fefefe;
+      border: 2px solid #333;
+  }
+  .pick-file input {
+ 
+    height: 35px;
+      background-color: #fefefe;
+  }
+  ::-webkit-file-upload-button {
+    background: #fefefe;
+    color: #fefefe;
+    border: none;
+  }
+  .btn-file {
+    position: relative;
+    overflow: hidden;
+    height: 45px;
+      background-color: #fefefe !important;
+      float: right;
+    width: 40%;
+    border: 2px solid #333 !important;
+    color: #b0b0b0 !important;
+    font-size: 20px !important; 
+    font-weight: 600 !important;
+    padding-top: 5px !important;
+  }
+  .cam-icon img {
+    /* width: 35%; */
+    width: 12%;
+    margin-left: 15px;
+    margin-top: -4px;
+  }
+  .cam-icon1 img {
+    width: 35%;
+    /* width: 12%; */
+    margin-left: 15px;
+    margin-top: -4px;
+  }
+  .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+  }
+.btn-file i {
+    font-size: 30px;
+    margin-left: 5px;
+    margin-top: -7px;
+    position: relative;
+    top: 3px;
+}
+.btn-below-text {
+    float: right;
+    width: 100%;
+}
+.btn-below-text span {
+    width: 40%;
+    float: right;
+    text-align: center;
+    font-size: 15px;
+}
+.martop-neg-12 {
+  margin-top: -12px;
+}
+.card-header {
+  padding: 0 !important;
+  height: 45px;
+  background-color: rgba(255,255,255,0) !important;
+  border-bottom: 0px solid #fff !important;
+}
+.card {
+  background-color: unset !important;
+  border: unset !important;
+} 
+.card-body {
+  padding: 1rem !important;
+}
+.set-width-60 {
+  width: 60%;
+  max-width: 60%;
+}
+.set-width-35 {
+  width: 35%;
+  max-width: 40%;
+  margin-left: 5%;
+}
+.organization-text1 {
+  width: 35% !important;
+}
+.organization-text2 {
+  width: 50% !important;
+}
+.float-right {
+  float: right;
+}
+.set-width-100 {
+  width: 100%;
+  max-width: 100%;
+}
+.mid-line img {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 35px;
+}
+.submit {
+  margin-top: 2%;
+}
+.only-cam-icon {
+  /*width: 12%;*/
+  position: relative;
+  z-index: 999;
+  margin-left: 15px;
+    margin-top: -4px;
+}
+.only-cam-icon img {
+  width: 12%;
+}
+@media only screen and (max-width: 900px) {
+  .mid-line img {
+    width: unset;
+    margin-bottom: 20px;
+}
+  .both-padd {
+    padding: 0% 8% 0% 8%;
+}
+  .top-img img {
+    width: 80%;
+  }
+  .left-input {
+    width: 100%;
+    height: 35px;
+  }
+  .left-input .only-text {
+    top: 3px;
+  }
+  .capital-text {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.left-input .only-text {
+  font-size: 14px;
+}
+::placeholder {
+  font-size: 14px;
+  margin-top: -10px;
+}
+.organization-text {
+  font-size: 14px;
+  width: 80%;
+}
+.set-width-50 {
+  width: 100%;
+  max-width: 100%;
+}
+.btn-file {
+  float: left;
+  width: 100%;
+  height: 35px;
+  font-size: 14px !important;
+}
+.mob-no-ext-top {
+  margin-top: 0px;
+}
+.card-body {
+  padding-top: 0px !important;
+}
+.organization-text2 {
+  width: 80% !important;
+}
+.set-width-60 {
+  width: 100%;
+  max-width: 100%;
+}
+.doub-left-input {
+  height: 60px;
+  padding-left: 10px;
+}
+.doub-left-input .only-text {
+  padding-left: 0px;
+}
+.set-width-35 {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0%;
+}
+.btn-below-text {
+  float: unset !important;
+  text-align: center;
+}
+.btn-below-text span {
+  float: unset !important;
+  text-align: center;
+}
+.martop-neg-12 {
+  margin-top: 0px;
+}
+.cam-icon img {
+  width: 10%;
+}
+.cam-icon1 img {
+  width: 25%;
+  /* width: 12%; */
+  margin-left: 15px;
+  margin-top: -4px;
+}
+.btn-below-text {
+  float: left;
+}
+.btn-below-text span {
+  float: left;
+}
+.checkdiv {
+  padding-left: 30px;
+}
+.label-text {
+  margin-right: 0px;
+}
+.padd-left-15 {
+  padding-left: 30px !important;
+}
+}
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .doub-left-input {
+    height: 35px;
+  }
+  .both-padd {
+    padding: 0% 5% 0% 5%;
+}
+  .adjust-height {
+    height: 35px !important;
+  }
+  .left-input .only-text {
+    font-size: 18px;
+}
+::placeholder {
+  font-size: 18px;
+}
+.cam-icon img {
+  width: 10%;
+}
+}
