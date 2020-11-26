@@ -48,7 +48,7 @@ class Controller extends BaseController
     }
     public function list(Request $request) {
         if (!empty($_SESSION['user_name'])) {
-            $fulllist = digitalform::all();
+            $fulllist = digitalform::paginate(10);
             return view('list',['list'=>$fulllist]);
         }
         else {
@@ -164,6 +164,19 @@ file_put_contents("geolocation_upload/".$imageName,base64_decode($dat));
         
         
         $digitalform->gst_by_client = $request->get('gst_in');
+        $digitalform->promoter_name = $request->get('promoter_name');
+        $digitalform->dispatch_destination = $request->get('dispatch');
+        if(!empty($digitalform->dispatch_destination)) {
+            $digitalform->dispatch_destination = implode(',',$digitalform->dispatch_destination);
+        }
+        else {}
+        $digitalform->geolocationtext = $request->get('geolocationtext');
+        if(empty($digitalform->pan_india)) {
+            $digitalform->pan_india = "Not applicable";
+        }
+        else {
+            
+        }
 
         // return  $digitalform->geo_location;
 
@@ -209,6 +222,7 @@ file_put_contents("geolocation_upload/".$imageName,base64_decode($dat));
             'E-mail ID',
             'Address',
             'Geo Location (Latitude/Logitude)',
+            'Geo LOaction In Text',
             'Consumer Goods',
             'Industrial Goods',
             'Commercial Goods',
@@ -221,6 +235,7 @@ file_put_contents("geolocation_upload/".$imageName,base64_decode($dat));
             'Photo of the shop',
             'Photo of Visiting Card',
             'GST In, If Provided by Client',
+            'Promoter Name',
             'Date'));
             foreach($fulllist as $row) {
                 fputcsv($output, array($row['id'],
@@ -232,6 +247,7 @@ file_put_contents("geolocation_upload/".$imageName,base64_decode($dat));
             $row['email_id'],
             $row['address'],
             $row['geo_location'],
+            $row['geolocationtext'],
             $row['consumer_goods'],
             $row['industrial_goods'],
             $row['Commercial_goods'],
@@ -244,6 +260,7 @@ file_put_contents("geolocation_upload/".$imageName,base64_decode($dat));
             $row['photo_shop'],
             $row['photo_visiting_card'],
             $row['gst_by_client'],
+            $row['promoter_name'],
             $row['created_at'],
             ));
             }

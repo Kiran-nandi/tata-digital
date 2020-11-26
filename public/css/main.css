@@ -9,6 +9,14 @@
   }
 }
 
+.no-left-padd {
+  padding-left: 0px !important;
+}
+.no-right-padd {
+  padding-right: 0px !important;
+}
+
+
 .top-img img {
     margin: 0px auto;
     display: block;
@@ -229,6 +237,9 @@
   width: 12%;
 }
 @media only screen and (max-width: 900px) {
+  .no-padd-both-mob {
+    padding: unset !important;
+  }
   .mid-line img {
     width: unset;
     margin-bottom: 20px;

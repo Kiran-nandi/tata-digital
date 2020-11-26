@@ -14,6 +14,7 @@
 <body style="background-color: #f2f4f3;overflow-x: hidden;">
     <section>
         <div class="top-img">
+            <img src="" style="display:none;" alt="">
             <img src="{{asset('images/tata-logo.png')}}">
         </div>
         <div class="mid-line">
@@ -24,8 +25,8 @@
                 <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
                 <div class="row">
                     <span class="capital-text"><b>PLEASE FILL IN THE FORM IN CAPITAL LETTERS :-</b></span>
-                    <input type="text" class="left-input" name="name_of_entity" placeholder="NAME OF THE ENTITY / SOLE PROPRIETORSHIP">
-                    <input type="text" class="left-input extra-top-33" name="contact_name" placeholder="NAME CONTACT PERSON">
+                    <input type="text" class="left-input" name="name_of_entity" placeholder="NAME OF THE ENTITY / SOLE PROPRIETORSHIP * " >
+                    <input type="text" class="left-input extra-top-33" name="contact_name" placeholder="NAME CONTACT PERSON * " >
                     <!-- contact name -->
                     <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                         <span class="organization-text">(<span>&#8544;</span>)&nbsp;Owner</span>
@@ -41,36 +42,38 @@
                         <br>
                     </div>
                     <div class="left-input ext-top-12">
-                        <span class="only-text">TYPE OF ORGANIZATION</span>
+                        <span class="only-text">TYPE OF ORGANIZATION * </span>
                     </div>
                     <!-- Type of organization -->
-                    <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
-                        <span class="organization-text">(<span>&#8544;</span>)&nbsp;Manufacturer</span>
-                        <span><input type="checkbox" name="organization" value="Manufacturer"></span>
-                        <br>
-                        <span class="organization-text">(<span>&#8544;&#8544;&#8544;</span>)&nbsp;Stockiest</span>
-                        <span><input type="checkbox" name="organization" value="Stockiest"></span>
-                        <br>
-                        <span class="organization-text">(<span>&#x2164;</span>)&nbsp;Dealer</span>
-                        <span><input type="checkbox" name="organization" value="Dealer"></span>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
-                        <span class="organization-text">(<span>&#8544;&#8544;</span>)&nbsp;Distributor</span>
-                        <span><input type="checkbox" name="organization" value="Distributor"></span>
-                        <br>
-                        <span class="organization-text">(<span>&#8544;&#x2164;</span>)&nbsp;Trader</span>
-                        <span><input type="checkbox" name="organization" value="Trader"></span>
-                        <br>
-                    </div>
-                    <input type="text" class="left-input ext-top-12" name="contact_number" placeholder="CONTACT NUMBER">
-                    <input type="email" class="left-input" name="emailid" placeholder="E-MAIL ID">
-                    <input type="text" class="left-input" name="address" placeholder="ADDRESS">
-                    <div class="set-width-50">
-                        <div class="left-input">
-                            <span class="only-text">NATURE OF THE BUSINESS</span>
+                    <div class="row comp-check" style="width: 100%;margin-left: 0px;">
+                        <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
+                            <span class="organization-text">(<span>&#8544;</span>)&nbsp;Manufacturer</span>
+                            <span><input type="checkbox" name="organization" value="Manufacturer" ></span>
+                            <br>
+                            <span class="organization-text">(<span>&#8544;&#8544;&#8544;</span>)&nbsp;Stockiest</span>
+                            <span><input type="checkbox" name="organization" value="Stockiest" ></span>
+                            <br>
+                            <span class="organization-text">(<span>&#x2164;</span>)&nbsp;Dealer</span>
+                            <span><input type="checkbox" name="organization" value="Dealer" ></span>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
+                            <span class="organization-text">(<span>&#8544;&#8544;</span>)&nbsp;Distributor</span>
+                            <span><input type="checkbox" name="organization" value="Distributor" ></span>
+                            <br>
+                            <span class="organization-text">(<span>&#8544;&#x2164;</span>)&nbsp;Trader</span>
+                            <span><input type="checkbox" name="organization" value="Trader" ></span>
+                            <br>
                         </div>
                     </div>
-                    <div id="accordion" style="width: 100%;">
+                    <input type="text" class="left-input ext-top-12" name="contact_number" placeholder="CONTACT NUMBER * " >
+                    <input type="email" class="left-input" name="emailid" placeholder="E-MAIL ID">
+                    <input type="text" class="left-input" name="address" placeholder="ADDRESS *" >
+                    <div class="set-width-50">
+                        <div class="left-input">
+                            <span class="only-text">NATURE OF THE BUSINESS * </span>
+                        </div>
+                    </div>
+                    <div id="accordion" class="comp-check1" style="width: 100%;">
                         <div class="card">
                             <div class="card-header">
                               <a class="card-link" data-toggle="collapse" href="#collapseOne">
@@ -83,33 +86,33 @@
                               <div class="row card-body">
                                 <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                                     <span class="organization-text">(<span>&#8544;</span>)&nbsp;Cosmetics</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Cosmetics"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Cosmetics" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8544;&#8544;&#8544;</span>)&nbsp;Leather</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Leather"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Leather" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;</span>)&nbsp;Apparel</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Apparel"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Apparel" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;&#8544;&#8544;</span>)&nbsp;Handicrafts</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Handicrafts"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Handicrafts" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8544;&#8553;</span>)&nbsp;Other - FMCG</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Other - FMCG"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Other - FMCG" ></span>
                                     <br>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                                     <span class="organization-text">(<span>&#8544;&#8544;</span>)&nbsp;Electronics</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Electronics"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Electronics" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8544;&#x2164;</span>)&nbsp;Furniture</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Furniture"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Furniture" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;&#8544;</span>)&nbsp;Drugs & Pharma</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Drugs & Pharma"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Drugs & Pharma" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;&#8544;&#8544;&#8544;</span>)&nbsp;Foods Products/Processed foods</span>
-                                    <span><input type="checkbox" name="consumer_goods" value="Foods Products/Processed foods"></span>
+                                    <span><input type="checkbox" name="consumer_goods" value="Foods Products/Processed foods" ></span>
                                     <br>
                                 </div>
                               </div>
@@ -127,16 +130,16 @@
                               <div class="card-body row">
                                 <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                                     <span class="organization-text">(<span>&#8544;</span>)&nbsp;Machinery Equipment</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Machinery Equipment"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Machinery Equipment" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8544;&#8544;&#8544;</span>)&nbsp;Chemicals</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Chemicals"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Chemicals" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;</span>)&nbsp;Agricultural products</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Agricultural products"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Agricultural products" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;&#8544;&#8544;</span>)&nbsp;Pharmaceuticals</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Pharmaceuticals"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Pharmaceuticals" ></span>
                                     <br>
                                     <!-- <span class="organization-text">(<span>&#8544;&#8553;</span>)&nbsp;Paper Products - paper plates/wedding cards/tissues</span>
                                     <span><input type="checkbox" name="organization" value="Stockiest"></span>
@@ -144,35 +147,35 @@
                                 </div>
                                 <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                                     <span class="organization-text">(<span>&#8544;&#8544;</span>)&nbsp;Electrical Equipment</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Electrical Equipment"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Electrical Equipment" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8544;&#x2164;</span>)&nbsp;Packing Materials</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Packing Materials"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Packing Materials" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;&#8544;</span>)&nbsp;Automobile spares/accessories</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Automobile spares/accessories"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Automobile spares/accessories" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;&#8544;&#8544;&#8544;</span>)&nbsp;Medical equipment</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Medical equipment"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Medical equipment" ></span>
                                     <br>
                                 </div>
                                 <span class="organization-text padd-left-15 organization-text2 oneselect">(<span>&#8544;&#8553;</span>)&nbsp;Paper Products - paper plates/wedding cards/tissues</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Paper Products - paper plates/wedding cards/tissues"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Paper Products - paper plates/wedding cards/tissues" ></span>
                                 <br>
                                 <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                                     <span class="organization-text">(<span>&#8553;</span>)&nbsp;Plastic products</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Plastic products"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Plastic products" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8553;&#8544;&#8544;</span>)&nbsp;Steel/Castings & Forgings </span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Steel/Castings & Forgings"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Steel/Castings & Forgings" ></span>
                                     <br>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                                     <span class="organization-text">(<span>&#8553;&#8544;</span>)&nbsp;Sanitaryware</span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Sanitaryware"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Sanitaryware" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8553;&#8544;&#8544;&#8544;</span>)&nbsp;Textile/yarns </span>
-                                    <span><input type="checkbox" name="industrial_goods" value="Textile/yarns"></span>
+                                    <span><input type="checkbox" name="industrial_goods" value="Textile/yarns" ></span>
                                     <br>
                                 </div>
                               </div>
@@ -190,20 +193,20 @@
                               <div class="card-body row">
                                 <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                                     <span class="organization-text">(<span>&#8544;</span>)&nbsp;Furniture</span>
-                                    <span><input type="checkbox" name="commercial_goods" value="Furniture"></span>
+                                    <span><input type="checkbox" name="commercial_goods" value="Furniture" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8544;&#8544;&#8544;</span>)&nbsp;Stationery/Books</span>
-                                    <span><input type="checkbox" name="commercial_goods" value="Stationery/Books"></span>
+                                    <span><input type="checkbox" name="commercial_goods" value="Stationery/Books" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#x2164;</span>)&nbsp;Gymnasium materials</span>
-                                    <span><input type="checkbox" name="commercial_goods" value="Gymnasium materials"></span>
+                                    <span><input type="checkbox" name="commercial_goods" value="Gymnasium materials" ></span>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
                                     <span class="organization-text">(<span>&#8544;&#8544;</span>)&nbsp;Electronics</span>
-                                    <span><input type="checkbox" name="commercial_goods" value="Electronics"></span>
+                                    <span><input type="checkbox" name="commercial_goods" value="Electronics" ></span>
                                     <br>
                                     <span class="organization-text">(<span>&#8544;&#x2164;</span>)&nbsp;Handicrafts</span>
-                                    <span><input type="checkbox" name="commercial_goods" value="Handicrafts"></span>
+                                    <span><input type="checkbox" name="commercial_goods" value="Handicrafts" ></span>
                                     <br>
                                 </div>
                               </div>
@@ -216,30 +219,36 @@
                         </div>
                     </div>
                     <div class="set-width-35 ext-top-12 float-right mob-no-ext-top">
-                        <input type="text" class="left-input" name="panindia" />
+                        <input type="number" class="left-input" name="panindia" />
                     </div>
-                    <div class="set-width-60">
-                        <div class="left-input">
-                            <span class="only-text">TOP 3 DISPATCH DESTINATIONS BY VOLUME</span>
+                    <div class="left-input">
+                        <span class="only-text">TOP 3 DISPATCH DESTINATIONS BY VOLUME * </span>
+                    </div>
+                    <div class="col-xl-4 col-xs-12 no-padd-both-mob no-left-padd">
+                        <input type="text" class="left-input" name="dispatch[]" placeholder="Destination 1" />
+                    </div>
+                    <div class="col-xl-4 col-xs-12 no-padd-both-mob ">
+                        <input type="text" class="left-input" name="dispatch[]" placeholder="Destination 2" />
+                    </div>
+                    <div class="col-xl-4 col-xs-12 no-padd-both-mob no-right-padd">
+                        <input type="text" class="left-input" name="dispatch[]" placeholder="Destination 3" />
+                    </div>
+                    <div class="left-input doub-left-input">
+                        <span class="only-text ">DELHI TO MUMBAI/MUMBAI TO DELHI POTENTIAL (MONTHLY IN TONS) * </span>
+                    </div>
+                    <input type="text" class="left-input" name="mum_to_del" >
+                    <div class="left-input doub-left-input">
+                        <span class="only-text">MATERIALS BEING SENT TO JAIPUR/AHMEDABAD/SURAT * </span>
+                    </div>
+                    <div class="row comp-check2" style="width: 100%;margin-left: 0px;margin-right: 0px;">
+                        <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
+                            <span class="organization-text organization-text1">YES</span>
+                            <span><input type="checkbox" name="materials_sent" value="YES" ></span>
                         </div>
-                    </div>
-                    <div class="set-width-35 float-right">
-                        <input type="text" class="left-input" name="dispatch" />
-                    </div>
-                    <div class="left-input doub-left-input">
-                        <span class="only-text ">DELHI TO MUMBAI/MUMBAI TO DELHI POTENTIAL (MONTHLY IN TONS)</span>
-                    </div>
-                    <input type="text" class="left-input" name="mum_to_del">
-                    <div class="left-input doub-left-input">
-                        <span class="only-text">MATERIALS BEING SENT TO JAIPUR/AHMEDABAD/SURAT</span>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
-                        <span class="organization-text organization-text1">YES</span>
-                        <span><input type="checkbox" name="materials_sent" value="YES"></span>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
-                        <span class="organization-text organization-text1">NO</span>
-                        <span><input type="checkbox" name="materials_sent" value="NO"></span>
+                        <div class="col-xl-6 col-lg-6 padd-left-15 oneselect">
+                            <span class="organization-text organization-text1">NO</span>
+                            <span><input type="checkbox" name="materials_sent" value="NO" ></span>
+                        </div>
                     </div>
                     <div class="left-input ext-top-12 doub-left-input">
                         <span class="only-text">EXISTING TRANSPORTER (PRESENTLY WORKING WITH WHICH TRANSPORTER(S))</span>
@@ -285,28 +294,31 @@
                         <br>
                     </div>
                     <div class="left-input ext-top-12 doub-left-input">
-                        <span class="only-text">INTERESTED TO WORK WITH TATA DIGITAL LOGISTICS</span>
+                        <span class="only-text">INTERESTED TO WORK WITH TATA DIGITAL LOGISTICS *</span>
                     </div>
-                    <div class="col-xl-4 col-lg-4 padd-left-15 oneselect">
-                        <span class="organization-text organization-text1">YES</span>
-                        <span><input type="checkbox" name="interest_work" value="YES"></span>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 padd-left-15 oneselect">
-                        <span class="organization-text organization-text1">NO</span>
-                        <span><input type="checkbox" name="interest_work" value="NO"></span>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 padd-left-15 oneselect">
-                        <span class="organization-text organization-text1">MAY BE</span>
-                        <span><input type="checkbox" name="interest_work" value="MAY BE"></span>
+                    <div class="row comp-check3" style="width: 100%;margin-left: 0px;margin-right: 0px;">
+                        <div class="col-xl-4 col-lg-4 padd-left-15 oneselect">
+                            <span class="organization-text organization-text1">YES</span>
+                            <span><input type="checkbox" name="interest_work" value="YES" ></span>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 padd-left-15 oneselect">
+                            <span class="organization-text organization-text1">NO</span>
+                            <span><input type="checkbox" name="interest_work" value="NO" ></span>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 padd-left-15 oneselect">
+                            <span class="organization-text organization-text1">MAY BE</span>
+                            <span><input type="checkbox" name="interest_work" value="MAY BE" ></span>
+                        </div>
                     </div>
                     <div class="set-width-50 ext-top-12">
                         <div class="left-input">
-                            <span class="only-text">GEO LOCATION(LATITUDE/LONGITUDE)</span>
+                            <span class="only-text">GEO LOCATION(LATITUDE/LONGITUDE) * </span>
                         </div>
                     </div>
                     <div class="set-width-50 ext-top-12">
                         <div class="btn btn-primary btn-file" >
-                            PICK FILE<input id="demo" name="geolocation" type="file" accept="image/*" capture="camera">
+                            PICK FILE<input id="demo" name="geolocation" type="file" accept="image/*" capture="camera" >
+                            <input type="hidden" id="geodemo" name="geolocationtext" value="null">
                             <!-- <i class='fas fa-caret-down'></i> -->
                             <span class="cam-icon1">
                                 <img src="{{asset('images/cam-icon.png')}}" >
@@ -318,6 +330,8 @@
                     </div>
                     <script>
                         var x = document.getElementById("demo");
+                        // var y = document.getElementById("geodemo");
+                        // var y ='';
                         var lat,lon='';
                         function getLocation(e) {
                             e = e || window.event;
@@ -332,9 +346,11 @@
                         function showPosition(position) {
                             lat = position.coords.latitude;
                             lon = position.coords.longitude;
-                            // x.value="Latitude: " + position.coords.latitude + 
-                            // ",Longitude: " + position.coords.longitude;
+                            // y = "Latitude: " + lat + 
+                            // ",Longitude: " + lon;
                         }
+                        
+                        
                         </script>
                     <div class="set-width-50 ext-top-12">
                         <div class="left-input doub-left-input">
@@ -396,6 +412,7 @@
                     <div class="set-width-35 ext-top-12 float-right mob-no-ext-top">
                         <input type="text" class="left-input" name="gst_in" />
                     </div>
+                    <input type="text" class="left-input" name="promoter_name" placeholder="Promotor Name">
                     <div class="submit" style="margin-bottom: 3%;">
                         <button class="btn btn-primary">Submit</button>
                     </div>
@@ -403,8 +420,8 @@
                 
             </form>
         </div>
-<img src="" id="krp" style="width: 50px;" alt="">
-<canvas id="myCanvas" height="500px" width="500px"></canvas>
+<img src="" id="krp" style="width: 50px;display:none;" alt="">
+<canvas id="myCanvas" class="d-none" height="500px" width="500px"></canvas>
 
         <!-- mobile code -->
 
@@ -440,6 +457,7 @@ window.addEventListener('load', function() {
   });
 });
 var lat,lon,dataURL='';
+var y = '';
 
 function imageIsLoaded() { 
 //   alert(this.src);  // blob url
@@ -474,8 +492,8 @@ x.innerHTML = "Geolocation is not supported by this browser.";
                         function showPosition(position) {
                             lat = position.coords.latitude;
                             lon = position.coords.longitude;
-                            // x.value="Latitude: " + position.coords.latitude + 
-                            // ",Longitude: " + position.coords.longitude;
+                            y = "Latitude: " + position.coords.latitude + 
+                            ",Longitude: " + position.coords.longitude;
                         }
 
 // window.onload = function() {
@@ -495,6 +513,55 @@ $('#mainform').append(input);
 form.submit();
 })
 })
+
+$('.btn-file').click(function() {
+    $('#geodemo').val(y);
+});
+
+$(function(){
+    var requiredCheckboxes = $('.comp-check :checkbox[required]');
+    requiredCheckboxes.change(function(){
+        if(requiredCheckboxes.is(':checked')) {
+            requiredCheckboxes.removeAttr('required');
+        } else {
+            requiredCheckboxes.attr('required', 'required');
+        }
+    });
+});
+$(function(){
+    var requiredCheckboxes1 = $('.comp-check1 :checkbox[required]');
+    requiredCheckboxes1.change(function(){
+        if(requiredCheckboxes1.is(':checked')) {
+            requiredCheckboxes1.removeAttr('required');
+        } else {
+            requiredCheckboxes1.attr('required', 'required');
+        }
+    });
+});
+$(function(){
+    var requiredCheckboxes2 = $('.comp-check2 :checkbox[required]');
+    requiredCheckboxes2.change(function(){
+        if(requiredCheckboxes2.is(':checked')) {
+            requiredCheckboxes2.removeAttr('required');
+        } else {
+            requiredCheckboxes2.attr('required', 'required');
+        }
+    });
+});
+$(function(){
+    var requiredCheckboxes3 = $('.comp-check3 :checkbox[required]');
+    requiredCheckboxes3.change(function(){
+        if(requiredCheckboxes3.is(':checked')) {
+            requiredCheckboxes3.removeAttr('required');
+        } else {
+            requiredCheckboxes3.attr('required', 'required');
+        }
+    });
+});
+
+
+
+
 
 
 

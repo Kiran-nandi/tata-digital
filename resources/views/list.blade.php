@@ -60,6 +60,7 @@
               <th>Email Id</th>
               <th>Address</th>
               <th style="width: 15%;">Geo location</th>
+              <th>Geo Location in text</th>
               <th>Consumer Goods</th>
               <th>Industrial Goods</th>
               <th>Commercial Goods</th>
@@ -72,6 +73,7 @@
               <th>Photo of Shop</th>
               <th style="width: 15%;">Visiting Card</th>
               <th>GST IN</th>
+              <th>Promotor Name</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -90,6 +92,7 @@
               <td>
                 <img src="{{ asset('geolocation_upload/'.$digitalform->geo_location) }}" style="width:100%;"/>
               </td>
+              <td>{{$digitalform->geolocationtext}}</td>
               <td>{{$digitalform->consumer_goods}}</td>
               <td>{{$digitalform->industrial_goods}}</td>
               <td>{{$digitalform->Commercial_goods}}</td>
@@ -106,6 +109,7 @@
                 <img src="{{ asset('visiting_card_upload/'.$digitalform->photo_visiting_card) }}" style="width:100%;"/>
               </td>
               <td>{{$digitalform->gst_by_client}}</td>
+              <td>{{$digitalform->promoter_name}}</td>
               
               <td>
                 <a onclick="return deletenow()" href="deletecontact/{{$digitalform->id}}">
@@ -123,18 +127,25 @@
             }
         </script>
         </table>
+        {{$list->links()}}
       </div>
+
+      <style>
+      .pagination {
+        margin: 0px auto;
+      }
+      </style>
 
       <!-- code for mobile -->
 
 
-      <div class="row mar-top deskhide" style="padding-left:3%;padding-right: 3%; margin-top: 3%;">
+      <!-- <div class="row mar-top deskhide" style="padding-left:3%;padding-right: 3%; margin-top: 3%;">
         <h2 style="margin-bottom: 5%;">Contact List</h2>
         <div style="width: 100%;margin-top: -50px;">
             <a href="/admin/exportfile" class="btn btn-primary" style="float: right;">Export File</a>
         </div>
         
-        <!-- <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>             -->
+      
         @foreach($list as $digitalform)
         <table class="table" style="margin-bottom: 5%;">
             <tr>
@@ -198,57 +209,13 @@
         </table>
             @endforeach
             
-          <!-- <thead>
-            <tr>
-              <th>Id</th>
-              <th>Entity Name</th>
-              <th>Contact Person Name</th>
-              <th>Contact Detials</th>
-              <th>Address</th>
-              <th style="width: 15%;">Shop Img</th>
-              <th>Other Cities</th>
-              <th>PTL or FTL</th>
-              <th>Organisation</th>
-              <th>Proper Bills</th>
-              <th style="width: 15%;">Visiting Card</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-              @foreach($list as $digitalform)
-            <tr>
-              <td>{{$digitalform->id}}</td>
-              <td>{{$digitalform->name_entity}}</td>
-              <td>{{$digitalform->contact_name}}</td>
-              <td>{{$digitalform->contact_detials}}</td>
-              <td>{{$digitalform->address}}</td>
-              <td>
-                <img src="{{ asset('photo_shop_upload/'.$digitalform->photo_shop) }}" style="width:100%;"/>
-              </td>
-              <td>{{$digitalform->other_cities}}</td>
-              <td>{{$digitalform->ptl_or_ftl}}</td>
-              <td>{{$digitalform->organization}}</td>
-              <td>{{$digitalform->proper_bills}}</td>
-              <td>
-                <img src="{{ asset('visiting_card_upload/'.$digitalform->photo_visiting_card) }}" style="width:100%;"/>
-              </td>
-              <td>
-                <a onclick="return deletenow()" href="/admin/deletecontact/{{$digitalform->id}}">
-                    Delete
-                </a>
-              </td>
-            </tr>
-            @endforeach
-            
-          </tbody> -->
           <script>
             function deletenow()
             {
                 return confirm("are you sure u want to delete the item ??");
             }
         </script>
-        <!-- </table> -->
-      </div>
+      </div> -->
 </section>
 
 
